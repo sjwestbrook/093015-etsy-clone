@@ -54,3 +54,33 @@ a[ui-sref] {
 a[ng-click] {
   cursor: pointer;
 }
+
+
+/* products ------------------------------------ */
+.product-box  {
+  background:#FFF;
+  border-color:#CACACA;
+  border-bottom-color:#DADADA;
+  box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.15);
+  border-radius:3px;
+  padding:8px;
+}
+
+.product-img img {
+  display:block;
+  margin:0 auto 10px;
+  max-width:100%;
+}
+
+.product-content a  {
+  text-align:center;
+  font-size:14px;
+  color:#696969;
+  display:block;
+}
+
+.product-content .listing-price {
+  text-align:right;
+  color:#78C042;
+  font-size:12px;
+}

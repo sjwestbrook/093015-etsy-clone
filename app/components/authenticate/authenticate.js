@@ -4,45 +4,49 @@ angular
 
 // inject $state from ui-router as well so that we can redirect a user after successfully signing up or logging in
 
-function AuthenticateController(User, $rootScope) {
+function AuthenticateController(User, $rootScope, $state) {
   var authenticate = this;
 
   // create the objects for our forms
   authenticate.signupData = {};
-  authenticate.loginData = {};
+  authenticate.loginData  = {};
 
   // bind the functions to our controller
   authenticate.signup = signup;
-  authenticate.login = login;
+  authenticate.login  = login;
 
-  // sign a user up and bind their info to $rootScope
+  /**
+   * Sign a user up and bind their info to $rootScope
+   */
   function signup() {
     User.signup(authenticate.signupData)
-        .then(function(data) {
-          if (data.get('_id')) {
-            $rootScope.currentUser.id = data.get('_id');
-            $rootScope.currentUser.name = data.get('displayName');
-            $rootScope.currentUser.image = data.get('profileImg');
+      .then(function(data) {
+        if (data.get('_id')) {
+          $rootScope.currentUser.id    = data.get('_id');
+          $rootScope.currentUser.name  = data.get('displayName');
+          $rootScope.currentUser.image = data.get('profileImg');
 
-            // redirect the user
-            $state.go('home');
-          }
-        });
+          // redirect the user
+          $state.go('home');
+        }
+      });
   }
 
-  // use the User factory to log a user in
-  // bind the user's info to $rootScope
+  /**
+   * Use the User factory to log a user in
+   * Bind the user's information to $rootScope
+   */
   function login() {
     User.login(authenticate.loginData)
-        .then(function(data) {
-          if (data.get('_id')) {
-            $rootScope.currentUser.id = data.get('_id');
-            $rootScope.currentUser.name = data.get('displayName');
-            $rootScope.currentUser.image = data.get('profileImg');
+      .then(function(data) {
+        if (data.get('_id')) {
+          $rootScope.currentUser.id    = data.get('_id');
+          $rootScope.currentUser.name  = data.get('displayName');
+          $rootScope.currentUser.image = data.get('profileImg');
 
-            // redirect the user
-            $state.go('home');
-          }
-        });
+          // redirect the user
+          $state.go('home');
+        }
+      });
   }
-}  // end AuthenticateController
+}

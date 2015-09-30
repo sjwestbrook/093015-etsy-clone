@@ -9,7 +9,8 @@ angular.module ('etsyApp', [
   'app.product',
   'app.profile',
   'app.shop',
-  'UserService'
+  'UserService',
+  'ProductService'
 ])
 .controller('MainController', ['User', '$rootScope', MainController]);
 
