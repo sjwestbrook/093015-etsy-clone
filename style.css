@@ -50,3 +50,7 @@ footer      { padding-top:50px; }
 a[ui-sref] {
   cursor: pointer;
 }
+
+a[ng-click] {
+  cursor: pointer;
+}

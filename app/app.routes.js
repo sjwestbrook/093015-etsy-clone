@@ -17,7 +17,7 @@ function AppRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
       // home page
       .state('home', {
         url: '/',
-        templateUrl: '/app/components/home/home/html',
+        templateUrl: '/app/components/home/home.html',
         controller: 'HomeController as home'
       })
 
@@ -45,7 +45,7 @@ function AppRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
       // profile page
       .state('profile', {
         url: '/profile/{user_name}',
-        templateUrl: '/app/components/profile/profile.html'
+        templateUrl: '/app/components/profile/profile.html',
         controller: 'ProfileController as profile'
       })
 
