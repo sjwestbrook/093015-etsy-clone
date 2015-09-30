@@ -1,0 +1,10 @@
+{
+  "appId": "swangularetsy",
+  "apiKey": "27e50f70b798dab20dba4db146753f65f13400211ab7604cb5e3a54e45944c78",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
