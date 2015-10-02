@@ -1,6 +1,7 @@
 angular.module ('etsyApp', [
   'ngStamplay',
   'ui.router',
+  'ngFileUPload',
   'app.routes',
   'app.admin',
   'app.authenticate',

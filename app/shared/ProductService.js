@@ -169,5 +169,5 @@ function ProductService($stamplay, $q, $http) {
       });
     return def.promise;
   }
-  
+
 }

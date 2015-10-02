@@ -8,6 +8,6 @@ function HomeController(Product) {
   // get all the products and bind them to home.products
   Product.all()
     .then(function(data) {
-      home.products = data.instance;   // With all the products bound to home.products, we can ng-repeat over them in our home.html file.
+      home.products = data.instance;   // With all the products bound to home.products, we can ng-repeat over them in the home.html file.
     });
 }

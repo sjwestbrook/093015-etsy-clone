@@ -84,3 +84,45 @@ a[ng-click] {
   color:#78C042;
   font-size:12px;
 }
+
+
+/* listing ------------------------------------- */
+.listing-wrap       {
+  background:#FFF;
+  border:1px solid #ECECEC;
+  border-radius:3px;
+  padding:30px;
+}
+
+.listing-images img   {
+  border-radius:3px;
+  margin-bottom:20px;
+}
+
+.listing-description {
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+.listing-comments   {
+  background:#FEFEFE;
+  border-radius:3px;
+  padding:20px;
+}
+
+.listing-comments .comment  {
+  margin-bottom:15px;
+}
+
+.listing-extra    {
+  border:10px solid #E4F3D9;
+  border-radius:3px;
+  padding:20px;
+}
+
+.listing-extra h1 {
+  font-size:20px;
+  line-height:1.2;
+  color:#333;
+  margin:0 0 15px;
+}
